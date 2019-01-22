@@ -19,9 +19,13 @@ jobs:
 
       - run: npm run test
 
+      - run: cp -f ~/repo/.npmrc    ~/.npmrc
+
+      - run: npm config set registry https://rnakkiran.jfrog.io/rnakkiran/api/npm/npm/
+
       - run: mkdir -p  ~/repo/release/upper
 
-      - run: cp -r ~/repo/build/*          ~/repo/release/upper/
+      - run: cp -r ~/repo/build/src/*       ~/repo/release/upper/
 
       - run: cp ~/repo/package.json        ~/repo/release/upper/
 
@@ -29,8 +33,9 @@ jobs:
 
       - run: cp ~/repo/README.md          ~/repo/release/upper/
 
-      - run: cd ~/repo/release/upper && npm pack && ls -l  && pwd
+      - run: cd ~/repo/release/upper && npm publish --access public --registry https://rnakkiran.jfrog.io/rnakkiran/api/npm/npm/
 
+      - run: ls -l ~/repo/release/upper
 
 
 

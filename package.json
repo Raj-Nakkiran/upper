@@ -4,6 +4,7 @@
   "description": "Common library to make upper case",
   "main": "build/src/index.js",
   "types": "build/src/index.d.ts",
+  "publishConfig":{"registry":"https://rnakkiran.jfrog.io/rnakkiran/api/npm/npm/"},  
   "scripts": {
     "build": "npm run clean && tsc --declaration",
     "clean": "rm -rf build",
