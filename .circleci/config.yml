@@ -15,21 +15,21 @@ jobs:
 
       - run: npm install
 
-      - run: npm build
+      - run: npm run build
 
-      - run: npm test
+      - run: npm run test
 
-      - run: mkdir -p  ./release/upper
+      - run: mkdir -p  ~/repo/release/upper
 
-      - run: cp -r ./build/*        ./release/upper/
+      - run: cp -r ~/repo/build/*          ~/repo/release/upper/
 
-      - run: cp package.json        ./release/upper/
+      - run: cp ~/repo/package.json        ~/repo/release/upper/
 
-      - run: cp package-lock.json   ./release/upper/
+      - run: cp ~/repo/package-lock.json   ~/repo/release/upper/
 
-      - run: cp README.md          ./release/upper/
+      - run: cp ~/repo/README.md          ~/repo/release/upper/
 
-      - run: cd ./release/upper && npm pack && ls -l  && pwd
+      - run: cd ~/repo/release/upper && npm pack && ls -l  && pwd
 
 
 
