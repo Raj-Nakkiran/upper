@@ -1,0 +1,32 @@
+{
+  "name": "upper",
+  "version": "1.0.1",
+  "description": "Common library to make upper case",
+  "main": "build/src/index.js",
+  "types": "build/src/index.d.ts",
+  "scripts": {
+    "build": "npm run clean && tsc --declaration",
+    "clean": "rm -rf build",
+    "lint": "tslint --project .",
+    "test": "cross-env LOG_LEVEL=silent jest",
+    "test:debug": "cross-env LOG_LEVEL=debug jest ",
+    "test:watch": "cross-env LOG_LEVEL=debug jest --watch",
+    "test:coverage": "npm test -- --coverage"
+  },
+  "keywords": [
+    "lower case",
+    "upper case"
+  ],
+  "devDependencies": {
+    "@types/jest": "^23.3.5",
+    "@types/lodash": "^4.14.117",
+    "@types/node": "^10.12.0",
+    "@types/uuid": "^3.4.4",
+    "axios": "^0.18.0",
+    "cross-env": "^5.2.0",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.5",
+    "ts-lint": "^4.5.1",
+    "typescript": "^3.2.2"
+  }
+}
