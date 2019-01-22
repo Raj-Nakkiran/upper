@@ -1,6 +1,6 @@
 {
   "name": "upper",
-  "version": "1.0.1",
+  "version": "1.0.22",
   "description": "Common library to make upper case",
   "main": "build/src/index.js",
   "types": "build/src/index.d.ts",

@@ -19,7 +19,7 @@ jobs:
 
       - run: npm run test
 
-      - run: cp -f ~/repo/.npmrc    ~/.npmrc
+      - run: curl -u admin:AKCp5buTmXMWkbWA7gDihmqntxMuaGFWWT1oF5mZHwjvRb6SUck1aQxQD1gGmyvNwAWoyT8nr http://rnakkiran.jfrog.io/rnakkiran/api/npm/auth > ~/.npmrc
 
       - run: npm config set registry https://rnakkiran.jfrog.io/rnakkiran/api/npm/npm/
 
